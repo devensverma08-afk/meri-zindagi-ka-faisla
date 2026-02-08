@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>मेरी ज़िंदगी का फैसला</title>
+
+<style>
+body {
+  font-family: "Georgia", serif;
+  background: #fff0f5;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+h1 { color: #b30059; }
+button {
+  background: #b30059;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.section {
+  display: none;
+  background: white;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+}
+img {
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+#lightbox img {
+  width: 90%;
+  margin-top: 10%;
+}
+</style>
+</head>
+
+<body>
+
+<h1>मेरी ज़िंदगी का फैसला</h1>
+<p><b>देवेंस ❤️ नीती जी — हमेशा के लिए</b></p>
+
+<button onclick="show('s1')">हमारी शुरुआत</button>
+<div id="s1" class="section">
+<p>
+नीती जी मेरी ज़िंदगी का वो फैसला हैं  
+जिसे मैं हर जन्म में दोहराना चाहूँ।  
+ये रिश्ता प्यार से शुरू हुआ  
+और शादी पर खत्म होगा।
+</p>
+<img src="photo1.jpg" onclick="openImg(this.src)">
+</div>
+
+<button onclick="show('s2')">जिसके साथ पूरी ज़िंदगी</button>
+<div id="s2" class="section">
+<p>
+मुझे किसी और कहानी की तलाश नहीं,  
+बस नीती जी का साथ चाहिए।  
+हर हाल में, हर मोड़ पर।
+</p>
+<img src="photo2.jpg" onclick="openImg(this.src)">
+</div>
+
+<button onclick="show('s3')">मेरा वादा</button>
+<div id="s3" class="section">
+<p>
+मैं वादा करता हूँ —  
+इज़्ज़त, भरोसा और प्यार  
+कभी कम नहीं होने दूँगा।  
+ये रिश्ता ज़िंदगी भर का है।
+</p>
+<img src="photo3.jpg" onclick="openImg(this.src)">
+</div>
+
+<button onclick="show('s4')">शादी का इरादा</button>
+<div id="s4" class="section">
+<p>
+नीती जी,  
+मैं आपसे शादी करना चाहता हूँ।  
+घर, परिवार, भविष्य —  
+सब कुछ आपके साथ।
+<br><br>
+<b>— आपका देवेंस ❤️</b>
+</p>
+<img src="photo4.jpg" onclick="openImg(this.src)">
+</div>
+
+<div id="lightbox" onclick="this.style.display='none'">
+  <img id="bigImg">
+</div>
+
+<script>
+function show(id){
+  document.getElementById(id).style.display = "block";
+}
+function openImg(src){
+  document.getElementById("bigImg").src = src;
+  document.getElementById("lightbox").style.display = "block";
+}
+</script>
+
+</body>
+</html>
